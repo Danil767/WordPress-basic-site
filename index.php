@@ -7,13 +7,13 @@
       строганного и профилированного бруса
     </div>
     <div class="main__text">
-      За 10 лет мы возвели больше 250 домов и бань из бруса < br>
-        ИМЕЕМ БОЛЬШОЙ ОПЫТ В СТРОИТЕЛЬСТВЕ < br>
-          гарантируем качество и надежность всех построенных нами объектов < br>
-            ГАРАНТИЯ НА ДОМА И БАНИ ИЗ БРУСА 3 ГОДА
+      За 10 лет мы возвели больше 250 домов и бань из бруса
+      ИМЕЕМ БОЛЬШОЙ ОПЫТ В СТРОИТЕЛЬСТВЕ
+      гарантируем качество и надежность всех построенных нами объектов
+      ГАРАНТИЯ НА ДОМА И БАНИ ИЗ БРУСА 3 ГОДА
     </div>
     <div class="main__img">
-      <img src="assets/img/main-img.png" alt="">
+      <img src="<?php bloginfo('template_url'); ?>/assets/img/main-img.png" alt="">
     </div>
     <div class="project">
       <div class="project__title">
@@ -88,7 +88,7 @@
     </div>
   </div>
   <div class="download">
-    <img src="assets/img/download.png" alt="">
+    <img src="<?php bloginfo('template_url'); ?>/assets/img/download.png" alt="">
     <a class="download__btn" href="#">
       СКАЧАТЬ ВЕСЬ КАТАЛОГ ДОМОВ
     </a>
@@ -141,7 +141,7 @@
       </div>
     </div>
     <div class="main__img">
-      <img src="assets/img/main-img.png" alt="">
+      <img src="<?php bloginfo('template_url'); ?>/assets/img/main-img.png" alt="">
     </div>
   </div>
 </main>
