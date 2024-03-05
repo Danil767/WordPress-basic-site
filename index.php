@@ -3,14 +3,10 @@
 <main class="main">
   <div class="container">
     <div class="main__title">
-      Строительство домов и бань из
-      строганного и профилированного бруса
+      <?php the_field('main__title'); ?>
     </div>
     <div class="main__text">
-      За 10 лет мы возвели больше 250 домов и бань из бруса
-      ИМЕЕМ БОЛЬШОЙ ОПЫТ В СТРОИТЕЛЬСТВЕ
-      гарантируем качество и надежность всех построенных нами объектов
-      ГАРАНТИЯ НА ДОМА И БАНИ ИЗ БРУСА 3 ГОДА
+      <?php the_field('main__text'); ?>
     </div>
     <div class="main__img">
       <img src="<?php bloginfo('template_url'); ?>/assets/img/main-img.png" alt="">
@@ -101,8 +97,9 @@
       <div class="gallery__text">
         некоторые фотографии построенных нами домов и бань из бруса
       </div>
-      <div class="gallery__inner">
-        <a href="assets/img/item-1.jpg">
+      <div id="gallery__inner">
+        <?php the_field('photo'); ?>
+        <!-- <a href="assets/img/item-1.jpg">
           <img src="assets/img/item-1.jpg" alt="">
         </a>
         <a href="assets/img/item-1.jpg">
@@ -137,7 +134,7 @@
         </a>
         <a href="assets/img/item-1.jpg">
           <img src="assets/img/item-1.jpg" alt="">
-        </a>
+        </a> -->
       </div>
     </div>
     <div class="main__img">

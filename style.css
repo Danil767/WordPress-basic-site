@@ -156,14 +156,23 @@ body {
   font-size: 25px;
 }
 
-.gallery__inner {
+#gallery__inner .gallery .gallery-item {
+  margin: 0;
+}
+
+#gallery__inner .gallery .gallery-item img {
+  display: block;
+  border: none;
+}
+
+/* .gallery__inner {
   display: flex;
   flex-wrap: wrap;
 }
 
 .gallery__inner img {
   display: block;
-}
+} */
 
 .footer {
   text-align: center;
