@@ -91,6 +91,12 @@ body {
   padding: 90px 0;
 }
 
+.project ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .project__title {
   margin-bottom: 110px;
   font-size: 41px;
@@ -100,6 +106,7 @@ body {
 
 .project__item {
   margin-bottom: 150px;
+  padding: 0;
 }
 
 .project__name {
@@ -133,7 +140,7 @@ body {
 
 }
 
-.download__btn {
+.download__link {
   text-transform: uppercase;
   color: #FFFFFF;
   font-size: 32px;

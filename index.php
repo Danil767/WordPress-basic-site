@@ -13,128 +13,58 @@
     </div>
     <div class="project">
       <div class="project__title">
-        ПРОЕКТЫ ДОМОВ ИЗ БРУСА
+        <?php the_field('project__title'); ?>
       </div>
-      <div class="project__item">
-        <div class="project__name">
-          ДОМ #1
-        </div>
-        <div class="project__size">
-          Размер дома: 6 x 6
-        </div>
-        <div class="project__area">
-          Общая площадь дома: 54 кв . м
-        </div>
-        <div class="project__prise">
-          Стоимость - 402 000 рублей
-        </div>
-        <div class="project__images">
-          <div class="project__images-item">
-            <img src="assets/img/project-1.jpg" alt="">
-          </div>
-          <div class="project__images-item">
-            <img src="assets/img/project-2.jpg" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="project__item">
-        <div class="project__name">
-          ДОМ #2
-        </div>
-        <div class="project__size">
-          Размер дома: 6 x 7.5
-        </div>
-        <div class="project__area">
-          Общая площадь дома: 72 кв . м
-        </div>
-        <div class="project__prise">
-          Стоимость - 457 000 рублей
-        </div>
-        <div class="project__images">
-          <div class="project__images-item">
-            <img src="assets/img/project-3.jpg" alt="">
-          </div>
-          <div class="project__images-item">
-            <img src="assets/img/project-4.jpg" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="project__item">
-        <div class="project__name">
-          ДОМ #3
-        </div>
-        <div class="project__size">
-          Размер дома: 8 x 7.5
-        </div>
-        <div class="project__area">
-          Общая площадь дома: 92 кв . м
-        </div>
-        <div class="project__prise">
-          Стоимость - 635 000 рублей
-        </div>
-        <div class="project__images">
-          <div class="project__images-item">
-            <img src="assets/img/project-5.jpg" alt="">
-          </div>
-          <div class="project__images-item">
-            <img src="assets/img/project-6.jpg" alt="">
-          </div>
-        </div>
-      </div>
+      <?php
+      $featured_posts = get_field('project__item');
+      if ($featured_posts) : ?>
+        <ul>
+          <?php foreach ($featured_posts as $post) :
+            setup_postdata($post); ?>
+            <li class="project__item">
+              <div class="project__name">
+                <?php the_field('project__name'); ?>
+              </div>
+              <div class="project__size">
+                <?php the_field('project__size'); ?>
+              </div>
+              <div class="project__area">
+                <?php the_field('project__area'); ?>
+              </div>
+              <div class="project__prise">
+                <?php the_field('project__prise'); ?>
+              </div>
+              <div class="project__images">
+                <div class="project__images-item">
+                  <img src="<?php the_field('project__images-item-1'); ?>" alt="">
+                </div>
+                <div class="project__images-item">
+                  <img src="<?php the_field('project__images-item-2'); ?>" alt="">
+                </div>
+              </div>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+        <?php
+        wp_reset_postdata(); ?>
+      <?php endif; ?>
     </div>
   </div>
   <div class="download">
     <img src="<?php bloginfo('template_url'); ?>/assets/img/download.png" alt="">
-    <a class="download__btn" href="#">
-      СКАЧАТЬ ВЕСЬ КАТАЛОГ ДОМОВ
+    <a class="download__link" href="<?php the_field('download__link'); ?>" download> СКАЧАТЬ ВЕСЬ КАТАЛОГ ДОМОВ
     </a>
   </div>
   <div class="container">
     <div class="gallery">
       <div class="gallery__title">
-        ФОТОГРАФИИ НАШИХ РАБОТ
+        <?php the_field('gallery__title'); ?>
       </div>
       <div class="gallery__text">
-        некоторые фотографии построенных нами домов и бань из бруса
+        <?php the_field('gallery__text'); ?>
       </div>
       <div id="gallery__inner">
         <?php the_field('photo'); ?>
-        <!-- <a href="assets/img/item-1.jpg">
-          <img src="assets/img/item-1.jpg" alt="">
-        </a>
-        <a href="assets/img/item-1.jpg">
-          <img src="assets/img/item-1.jpg" alt="">
-        </a>
-        <a href="assets/img/item-1.jpg">
-          <img src="assets/img/item-1.jpg" alt="">
-        </a>
-        <a href="assets/img/item-1.jpg">
-          <img src="assets/img/item-1.jpg" alt="">
-        </a>
-        <a href="assets/img/item-1.jpg">
-          <img src="assets/img/item-1.jpg" alt="">
-        </a>
-        <a href="assets/img/item-1.jpg">
-          <img src="assets/img/item-1.jpg" alt="">
-        </a>
-        <a href="assets/img/item-1.jpg">
-          <img src="assets/img/item-1.jpg" alt="">
-        </a>
-        <a href="assets/img/item-1.jpg">
-          <img src="assets/img/item-1.jpg" alt="">
-        </a>
-        <a href="assets/img/item-1.jpg">
-          <img src="assets/img/item-1.jpg" alt="">
-        </a>
-        <a href="assets/img/item-1.jpg">
-          <img src="assets/img/item-1.jpg" alt="">
-        </a>
-        <a href="assets/img/item-1.jpg">
-          <img src="assets/img/item-1.jpg" alt="">
-        </a>
-        <a href="assets/img/item-1.jpg">
-          <img src="assets/img/item-1.jpg" alt="">
-        </a> -->
       </div>
     </div>
     <div class="main__img">

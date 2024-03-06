@@ -5,7 +5,7 @@
         <?php the_field('phone'); ?>
       </a>
       <a class="footer__email" href="mailto:namename@gmail.com">
-        namename@gmail . com
+        <?php the_field('email'); ?>
       </a>
     </div>
   </div>
